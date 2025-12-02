@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja Voluntário - GAC-PE</title>
+    <meta name="description"
+        content="Junte-se à nossa rede de solidariedade. Saiba como ser voluntário no GAC-PE e ajude a transformar vidas.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="GAC-PE Logo">
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="projects.html">Projetos</a></li>
+                    <li><a href="volunteer.html">Voluntariado</a></li>
+                    <li><a href="news.html">Notícias</a></li>
+                    <li><a href="transparency.html">Transparência</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="donate.html" class="btn btn-secondary">Doe Agora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Seja Voluntário</h1>
+                <p>Doe seu tempo e amor para quem mais precisa.</p>
+            </div>
+        </section>
+
+        <section class="volunteer-info" style="padding: var(--spacing-lg) 0;">
+            <div class="container">
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2 class="mb-sm">Como funciona?</h2>
+                        <p class="mb-sm">O voluntariado é a alma do GAC-PE. Buscamos pessoas comprometidas, maiores de
+                            18 anos, que possam doar 4 horas semanais (manhã ou tarde) para atuar em diversas áreas.</p>
+
+                        <h3 class="mb-xs" style="color: var(--secondary-color); margin-top: var(--spacing-md);">Áreas de
+                            Atuação:</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li class="mb-xs"><i class="fas fa-check-circle"
+                                    style="color: var(--success-color); margin-right: 10px;"></i> Brinquedotecas e
+                                Recreação</li>
+                            <li class="mb-xs"><i class="fas fa-check-circle"
+                                    style="color: var(--success-color); margin-right: 10px;"></i> Apoio Administrativo
+                            </li>
+                            <li class="mb-xs"><i class="fas fa-check-circle"
+                                    style="color: var(--success-color); margin-right: 10px;"></i> Eventos e Bazares</li>
+                            <li class="mb-xs"><i class="fas fa-check-circle"
+                                    style="color: var(--success-color); margin-right: 10px;"></i> Apoio nas Enfermarias
+                            </li>
+                        </ul>
+
+                        <div
+                            style="margin-top: var(--spacing-md); padding: var(--spacing-sm); background-color: #e8f4fd; border-left: 4px solid var(--primary-color); border-radius: var(--border-radius-sm);">
+                            <p><strong>Dúvidas?</strong> Fale conosco pelo WhatsApp do Voluntariado: <br>
+                                <a href="https://wa.me/5581999755118" target="_blank"
+                                    style="color: var(--primary-color); font-weight: bold;">
+                                    <i class="fab fa-whatsapp"></i> (81) 99975-5118
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="flex: 1; min-width: 300px; background: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);">
+                        <h2 class="text-center mb-md">Inscreva-se</h2>
+                        <form action="https://formspree.io/f/mqaklzvb" method="POST">
+                            <!-- Using a demo Formspree ID or placeholder -->
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nome Completo</label>
+                                <input type="text" id="name" name="name" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" id="email" name="email" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="area" class="form-label">Área de Interesse</label>
+                                <select id="area" name="area" class="form-control">
+                                    <option value="recreacao">Recreação / Brinquedoteca</option>
+                                    <option value="administrativo">Administrativo</option>
+                                    <option value="eventos">Eventos</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom: var(--spacing-md);">
+                                <label for="message" class="form-label">Por que quer ser voluntário?</label>
+                                <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Inscrição</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GAC-PE</h3>
+                    <p>Grupo de Ajuda à Criança Carente com Câncer de Pernambuco.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" style="margin-right: 10px; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="margin-right: 10px; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="font-size: 1.2rem;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="projects.html">Nossos Projetos</a></li>
+                        <li><a href="transparency.html">Transparência</a></li>
+                        <li><a href="contact.html">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul style="font-size: 0.95rem;">
+                        <li><i class="fas fa-map-marker-alt" style="width: 20px;"></i> Rua Arnóbio Marques, 310 - Santo
+                            Amaro, Recife/PE</li>
+                        <li><i class="fas fa-phone" style="width: 20px;"></i> (81) 3423.7636</li>
+                        <li><i class="fas fa-envelope" style="width: 20px;"></i> gac@gac.org.br</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GAC-PE. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

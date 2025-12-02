@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Paciente - GAC-PE</title>
+    <meta name="description" content="Acesso restrito ao Portal do Paciente GAC-PE.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            background-color: #f7fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-md);
+        }
+
+        .login-card {
+            background: var(--white);
+            width: 100%;
+            max-width: 450px;
+            padding: 2.5rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .login-header {
+            margin-bottom: 2rem;
+        }
+
+        .login-header img {
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+
+        .login-header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+            text-align: left;
+        }
+
+        .form-label {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            height: 48px;
+            padding: 0 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            width: 100%;
+            box-sizing: border-box;
+            /* Ensure padding doesn't affect width */
+        }
+
+        .form-control:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+            outline: none;
+        }
+
+        .btn-login {
+            width: 100%;
+            height: 48px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 0.5rem;
+        }
+
+        .btn-login:hover {
+            background-color: #5a327a;
+        }
+
+        .divider {
+            margin: 1.5rem 0;
+            position: relative;
+            text-align: center;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background-color: #e2e8f0;
+        }
+
+        .divider span {
+            background-color: var(--white);
+            padding: 0 10px;
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .btn-google {
+            width: 100%;
+            height: 48px;
+            background-color: var(--white);
+            color: var(--text-color);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.2s;
+        }
+
+        .btn-google:hover {
+            background-color: #f8fafc;
+            border-color: #cbd5e1;
+        }
+
+        .login-message {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            min-height: 20px;
+        }
+
+        .text-error {
+            color: #e53e3e;
+        }
+
+        .footer-simple {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="GAC-PE Logo">
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="projects.html">Projetos</a></li>
+                    <li><a href="volunteer.html">Voluntariado</a></li>
+                    <li><a href="news.html">Notícias</a></li>
+                    <li><a href="transparency.html">Transparência</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="login.html" class="active">Portal do Paciente</a></li>
+                    <li><a href="donate.html" class="btn btn-secondary">Doe Agora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <h1>Portal do Paciente</h1>
+                    <p>Acesse seus exames e agendamentos</p>
+                </div>
+
+                <form id="loginForm" onsubmit="event.preventDefault(); handleLogin();">
+                    <div class="form-group">
+                        <label for="docType" class="form-label">Tipo de Documento</label>
+                        <select id="docType" class="form-control">
+                            <option value="cpf">CPF</option>
+                            <option value="cns">Cartão Nacional de Saúde (CNS)</option>
+                            <option value="rg">RG</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="document" class="form-label">Documento</label>
+                        <input type="text" id="document" class="form-control" placeholder="Digite seu número" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" id="password" class="form-control" placeholder="Sua senha de acesso"
+                            required>
+                    </div>
+
+                    <button type="submit" class="btn-login">Entrar</button>
+                </form>
+
+                <div class="login-message" id="loginMessage"></div>
+
+                <div class="divider">
+                    <span>ou</span>
+                </div>
+
+                <button onclick="handleGoogleLogin()" class="btn-google">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"
+                        width="20">
+                    Entrar com Google
+                </button>
+
+                <div style="margin-top: 1.5rem;">
+                    <a href="#" style="color: var(--primary-color); font-size: 0.9rem; text-decoration: none;">Esqueceu
+                        sua senha?</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GAC-PE</h3>
+                    <p>Grupo de Ajuda à Criança Carente com Câncer de Pernambuco.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://instagram.com/gacpernambuco" target="_blank"
+                            style="margin-right: 10px; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/gacpernambuco" target="_blank"
+                            style="margin-right: 10px; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/5581999620199" target="_blank" style="font-size: 1.2rem;"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="#" target="_blank" style="margin-right: 10px; font-size: 1.2rem;"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" style="font-size: 1.2rem;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="projects.html">Nossos Projetos</a></li>
+                        <li><a href="transparency.html">Transparência</a></li>
+                        <li><a href="contact.html">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul style="font-size: 0.95rem;">
+                        <li><i class="fas fa-map-marker-alt" style="width: 20px;"></i> Rua Arnóbio Marques, 310 - Santo
+                            Amaro</li>
+                        <li><i class="fas fa-phone" style="width: 20px;"></i> (81) 3423.7636</li>
+                        <li><i class="fas fa-envelope" style="width: 20px;"></i> gac@gac.org.br</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social-apps">
+                <div class="social-icons">
+                    <a href="https://instagram.com/gacpernambuco" target="_blank" class="social-icon"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/gacpernambuco" target="_blank" class="social-icon"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5581999620199" target="_blank" class="social-icon"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <div class="app-download-section">
+                    <h4>Baixe nosso app</h4>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="app-btn-text">
+                                <span>Download on the</span>
+                                <span>App Store</span>
+                            </div>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="app-btn-text">
+                                <span>Get it on</span>
+                                <span>Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 GAC-PE. Todos os direitos reservados. Design Moderno & Humanizado.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Donate Button for Mobile -->
+    <a href="donate.html" class="btn btn-secondary fixed-donate-btn">
+        <i class="fas fa-heart" style="margin-right: 8px;"></i> Doe Agora
+    </a>
+
+    <script src="js/script.js"></script>
+    <script>
+        async function handleLogin() {
+            const docType = document.getElementById('docType').value;
+            const documentInput = document.getElementById('document').value;
+            const password = document.getElementById('password').value;
+            const messageDiv = document.getElementById('loginMessage');
+
+            // Limpar mensagens anteriores
+            messageDiv.textContent = '';
+            messageDiv.className = 'login-message';
+
+            // Validação básica (embora o 'required' no HTML já ajude)
+            if (!documentInput || !password) {
+                messageDiv.textContent = 'Por favor, preencha todos os campos.';
+                messageDiv.classList.add('text-error');
+                return;
+            }
+
+            const payload = {
+                docType: docType,
+                document: documentInput,
+                password: password
+            };
+
+            try {
+                // Feedback visual de carregamento
+                const btnLogin = document.querySelector('.btn-login');
+                const originalBtnText = btnLogin.textContent;
+                btnLogin.textContent = 'Entrando...';
+                btnLogin.disabled = true;
+
+                const response = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) { // Status 200-299
+                    const data = await response.json();
+
+                    // Armazenar token (exemplo)
+                    if (data.token) {
+                        localStorage.setItem('authToken', data.token);
+                    }
+
+                    // Redirecionar
+                    window.location.href = '/portal/dashboard';
+                } else {
+                    // Erro da API
+                    const errorData = await response.json().catch(() => ({ message: 'Erro desconhecido' }));
+                    messageDiv.textContent = errorData.message || 'Falha na autenticação. Verifique seus dados.';
+                    messageDiv.classList.add('text-error');
+                }
+            } catch (error) {
+                // Erro de rede ou outro
+                console.error('Erro no login:', error);
+                messageDiv.textContent = 'Erro de conexão. Tente novamente mais tarde.';
+                messageDiv.classList.add('text-error');
+            } finally {
+                // Restaurar botão
+                const btnLogin = document.querySelector('.btn-login');
+                btnLogin.textContent = 'Entrar';
+                btnLogin.disabled = false;
+            }
+        }
+
+        function handleGoogleLogin() {
+            // Redirecionamento para o fluxo OAuth do Google
+            window.location.href = '/api/auth/google/start';
+        }
+    </script>
+</body>
+
+</html>

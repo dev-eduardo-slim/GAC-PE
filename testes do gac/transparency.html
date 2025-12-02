@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparência - GAC-PE</title>
+    <meta name="description"
+        content="Acesse os relatórios financeiros, estatuto e documentos públicos do GAC-PE. Transparência e ética na gestão.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .document-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .document-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.2s ease;
+        }
+
+        .document-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .doc-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .pdf-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .doc-left span {
+            font-weight: 600;
+            color: #2D3748;
+            font-size: 1.05rem;
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: var(--primary-light);
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .document-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .download-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="GAC-PE Logo">
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="projects.html">Projetos</a></li>
+                    <li><a href="volunteer.html">Voluntariado</a></li>
+                    <li><a href="news.html">Notícias</a></li>
+                    <li><a href="transparency.html">Transparência</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="donate.html" class="btn btn-secondary">Doe Agora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Transparência</h1>
+                <p>Prestação de contas e documentos institucionais.</p>
+            </div>
+        </section>
+
+        <section id="documentos-publicos" class="container" style="margin-top: 40px; margin-bottom: 60px;">
+            <h2 class="mb-md">Documentos Públicos</h2>
+
+            <div class="document-list">
+                <!-- Estatuto Social -->
+                <div class="document-card">
+                    <div class="doc-left">
+                        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path fill="#e53e3e"
+                                d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-48-16.7-79-25.1-113.9-7.8-32.4-24.3-38.1-32.6-38.1-11.2 0-23.9 11.2-23.9 55.3 0 15 1.1 44 4.8 69-20 18.4-53.2 46.3-76-6.9 7.1-15.7 29-45.7 65.4-80.2 6.1-5.8 12.1-11 17.9-15.6-16.3-16.5-36.6-26-58.4-26C51.4 174.6 0 226 0 289.4 0 352.7 51.4 404 114.9 404c32.4 0 62.6-13.2 84.3-34.5 28.3-27.8 66-64.8 108.2-73.6 12.2-2.6 24.2-4.7 35.9-6.4 12.3 14.8 19.3 33.7 19.3 54.1 0 46.9-38 84.9-84.9 84.9-17.2 0-33.3-5.1-47.1-14.1-16.3 13.5-35.1 24.4-55.8 32.1-23.6 8.8-48.4 13.2-73.2 13.2-63.4 0-114.9-51.4-114.9-114.9S51.4 174.6 114.9 174.6c21.8 0 42.1 9.5 58.4 26 5.8-4.6 11.8-9.8 17.9-15.6 36.4-34.5 58.3-64.5 65.4-80.2 22.8 53.2 56 25.3 76 6.9-3.7-25-4.8-54-4.8-69 0-44.1 12.7-55.3 23.9-55.3 8.3 0 24.8 5.7 32.6 38.1 8.4 34.9 5.1 65.9 25.1 113.9 9.6 17.4 21.8 31.2 34.5 40.8-23.9 4.7-44.6 14.9-62.9 21.9 11.1-19.4 20.7-42.5 28.4-62.7 5.6-10 6.4-46.9-2-46.9-2.9 0-3 30.9 2 46.9z" />
+                        </svg>
+                        <span>Estatuto Social</span>
+                    </div>
+                    <a href="docs/estatuto-social.pdf" download class="download-btn">Baixar PDF</a>
+                </div>
+
+                <!-- Relatório de Atividades 2024 -->
+                <div class="document-card">
+                    <div class="doc-left">
+                        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path fill="#e53e3e"
+                                d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-48-16.7-79-25.1-113.9-7.8-32.4-24.3-38.1-32.6-38.1-11.2 0-23.9 11.2-23.9 55.3 0 15 1.1 44 4.8 69-20 18.4-53.2 46.3-76-6.9 7.1-15.7 29-45.7 65.4-80.2 6.1-5.8 12.1-11 17.9-15.6-16.3-16.5-36.6-26-58.4-26C51.4 174.6 0 226 0 289.4 0 352.7 51.4 404 114.9 404c32.4 0 62.6-13.2 84.3-34.5 28.3-27.8 66-64.8 108.2-73.6 12.2-2.6 24.2-4.7 35.9-6.4 12.3 14.8 19.3 33.7 19.3 54.1 0 46.9-38 84.9-84.9 84.9-17.2 0-33.3-5.1-47.1-14.1-16.3 13.5-35.1 24.4-55.8 32.1-23.6 8.8-48.4 13.2-73.2 13.2-63.4 0-114.9-51.4-114.9-114.9S51.4 174.6 114.9 174.6c21.8 0 42.1 9.5 58.4 26 5.8-4.6 11.8-9.8 17.9-15.6 36.4-34.5 58.3-64.5 65.4-80.2 22.8 53.2 56 25.3 76 6.9-3.7-25-4.8-54-4.8-69 0-44.1 12.7-55.3 23.9-55.3 8.3 0 24.8 5.7 32.6 38.1 8.4 34.9 5.1 65.9 25.1 113.9 9.6 17.4 21.8 31.2 34.5 40.8-23.9 4.7-44.6 14.9-62.9 21.9 11.1-19.4 20.7-42.5 28.4-62.7 5.6-10 6.4-46.9-2-46.9-2.9 0-3 30.9 2 46.9z" />
+                        </svg>
+                        <span>Relatório de Atividades 2024</span>
+                    </div>
+                    <a href="docs/relatorio-atividades-2024.pdf" download class="download-btn">Baixar PDF</a>
+                </div>
+
+                <!-- Balanço Financeiro 2024 -->
+                <div class="document-card">
+                    <div class="doc-left">
+                        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path fill="#e53e3e"
+                                d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-48-16.7-79-25.1-113.9-7.8-32.4-24.3-38.1-32.6-38.1-11.2 0-23.9 11.2-23.9 55.3 0 15 1.1 44 4.8 69-20 18.4-53.2 46.3-76-6.9 7.1-15.7 29-45.7 65.4-80.2 6.1-5.8 12.1-11 17.9-15.6-16.3-16.5-36.6-26-58.4-26C51.4 174.6 0 226 0 289.4 0 352.7 51.4 404 114.9 404c32.4 0 62.6-13.2 84.3-34.5 28.3-27.8 66-64.8 108.2-73.6 12.2-2.6 24.2-4.7 35.9-6.4 12.3 14.8 19.3 33.7 19.3 54.1 0 46.9-38 84.9-84.9 84.9-17.2 0-33.3-5.1-47.1-14.1-16.3 13.5-35.1 24.4-55.8 32.1-23.6 8.8-48.4 13.2-73.2 13.2-63.4 0-114.9-51.4-114.9-114.9S51.4 174.6 114.9 174.6c21.8 0 42.1 9.5 58.4 26 5.8-4.6 11.8-9.8 17.9-15.6 36.4-34.5 58.3-64.5 65.4-80.2 22.8 53.2 56 25.3 76 6.9-3.7-25-4.8-54-4.8-69 0-44.1 12.7-55.3 23.9-55.3 8.3 0 24.8 5.7 32.6 38.1 8.4 34.9 5.1 65.9 25.1 113.9 9.6 17.4 21.8 31.2 34.5 40.8-23.9 4.7-44.6 14.9-62.9 21.9 11.1-19.4 20.7-42.5 28.4-62.7 5.6-10 6.4-46.9-2-46.9-2.9 0-3 30.9 2 46.9z" />
+                        </svg>
+                        <span>Balanço Financeiro 2024</span>
+                    </div>
+                    <a href="docs/balanco-financeiro-2024.pdf" download class="download-btn">Baixar PDF</a>
+                </div>
+
+                <!-- Certificado de Filantropia (CEBAS) -->
+                <div class="document-card">
+                    <div class="doc-left">
+                        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path fill="#e53e3e"
+                                d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-48-16.7-79-25.1-113.9-7.8-32.4-24.3-38.1-32.6-38.1-11.2 0-23.9 11.2-23.9 55.3 0 15 1.1 44 4.8 69-20 18.4-53.2 46.3-76-6.9 7.1-15.7 29-45.7 65.4-80.2 6.1-5.8 12.1-11 17.9-15.6-16.3-16.5-36.6-26-58.4-26C51.4 174.6 0 226 0 289.4 0 352.7 51.4 404 114.9 404c32.4 0 62.6-13.2 84.3-34.5 28.3-27.8 66-64.8 108.2-73.6 12.2-2.6 24.2-4.7 35.9-6.4 12.3 14.8 19.3 33.7 19.3 54.1 0 46.9-38 84.9-84.9 84.9-17.2 0-33.3-5.1-47.1-14.1-16.3 13.5-35.1 24.4-55.8 32.1-23.6 8.8-48.4 13.2-73.2 13.2-63.4 0-114.9-51.4-114.9-114.9S51.4 174.6 114.9 174.6c21.8 0 42.1 9.5 58.4 26 5.8-4.6 11.8-9.8 17.9-15.6 36.4-34.5 58.3-64.5 65.4-80.2 22.8 53.2 56 25.3 76 6.9-3.7-25-4.8-54-4.8-69 0-44.1 12.7-55.3 23.9-55.3 8.3 0 24.8 5.7 32.6 38.1 8.4 34.9 5.1 65.9 25.1 113.9 9.6 17.4 21.8 31.2 34.5 40.8-23.9 4.7-44.6 14.9-62.9 21.9 11.1-19.4 20.7-42.5 28.4-62.7 5.6-10 6.4-46.9-2-46.9-2.9 0-3 30.9 2 46.9z" />
+                        </svg>
+                        <span>Certificado de Filantropia (CEBAS)</span>
+                    </div>
+                    <a href="docs/certificado-cebas.pdf" download class="download-btn">Baixar PDF</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GAC-PE</h3>
+                    <p>Grupo de Ajuda à Criança Carente com Câncer de Pernambuco.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" style="margin-right: 10px; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="margin-right: 10px; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="font-size: 1.2rem;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="projects.html">Nossos Projetos</a></li>
+                        <li><a href="transparency.html">Transparência</a></li>
+                        <li><a href="contact.html">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul style="font-size: 0.95rem;">
+                        <li><i class="fas fa-map-marker-alt" style="width: 20px;"></i> Rua Arnóbio Marques, 310 - Santo
+                            Amaro, Recife/PE</li>
+                        <li><i class="fas fa-phone" style="width: 20px;"></i> (81) 3423.7636</li>
+                        <li><i class="fas fa-envelope" style="width: 20px;"></i> gac@gac.org.br</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GAC-PE. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

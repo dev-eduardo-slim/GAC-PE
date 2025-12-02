@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Paciente - GAC-PE</title>
+    <meta name="description"
+        content="Acesse o Portal do Paciente do GAC-PE para agendamentos, resultados e informações.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: var(--off-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: var(--spacing-sm);
+        }
+
+        .portal-container {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 480px;
+            padding: var(--spacing-md);
+            text-align: center;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .portal-header {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .portal-header img {
+            height: 60px;
+            margin: 0 auto var(--spacing-sm);
+        }
+
+        .portal-header h1 {
+            font-size: 1.75rem;
+            color: var(--text-color);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .portal-header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #E2E8F0;
+            border-radius: var(--border-radius-sm);
+            font-family: var(--font-main);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(107, 63, 145, 0.1);
+            outline: none;
+        }
+
+        .password-input-wrapper {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        .btn-block {
+            width: 100%;
+            margin-top: var(--spacing-sm);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: var(--spacing-md) 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .divider::before {
+            margin-right: .5em;
+        }
+
+        .divider::after {
+            margin-left: .5em;
+        }
+
+        .btn-google {
+            background: var(--white);
+            color: var(--text-color);
+            border: 1px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--border-radius-pill);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-google:hover {
+            background-color: #F7FAFC;
+            border-color: #CBD5E0;
+        }
+
+        .register-link {
+            margin-top: var(--spacing-md);
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+
+        .register-link a {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--text-light);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .back-home:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-home">
+        <i class="fas fa-arrow-left"></i> Voltar para o site
+    </a>
+
+    <div class="portal-container">
+        <div class="portal-header">
+            <img src="assets/images/logo.png" alt="GAC-PE Logo">
+            <h1>Bem-vindo ao Portal</h1>
+            <p>Acesse seus exames, agendamentos e histórico.</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label class="form-label">Selecione o documento</label>
+                <select class="form-control">
+                    <option value="cpf">CPF</option>
+                    <option value="carteirinha">Carteirinha</option>
+                    <option value="rg">RG</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Número do Documento</label>
+                <input type="text" class="form-control" placeholder="Digite apenas números">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Senha</label>
+                <div class="password-input-wrapper">
+                    <input type="password" class="form-control" placeholder="Sua senha">
+                    <i class="fas fa-eye password-toggle"></i>
+                </div>
+                <a href="#" class="forgot-password">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+        </form>
+
+        <div class="divider">ou</div>
+
+        <button class="btn-google">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"
+                style="width: 20px; height: 20px; display: inline-block;">
+            Entrar com Google
+        </button>
+
+        <div class="register-link">
+            Não possui conta? <a href="#">Cadastre-se</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
